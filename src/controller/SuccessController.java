@@ -12,6 +12,7 @@ import javafx.stage.Stage;
  * Created by jitaekim on 9/18/16.
  */
 public class SuccessController {
+    @FXML
     private void handleLogoutPressed(ActionEvent event) {
         try {
             ((Node)(event.getSource())).getScene().getWindow().hide();

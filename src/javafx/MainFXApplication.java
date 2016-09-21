@@ -24,7 +24,7 @@ public class MainFXApplication extends Application {
         stage = primaryStage;
 
         primaryStage.setTitle(TITLE);
-        showView("welcome");
+        showView("WelcomeView");
         primaryStage.show();
     }
 

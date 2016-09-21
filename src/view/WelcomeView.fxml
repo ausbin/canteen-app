@@ -13,11 +13,11 @@
       <Pane prefHeight="285.0" prefWidth="297.0">
          <children>
             <Label layoutX="119.0" layoutY="51.0" prefHeight="16.0" prefWidth="57.0" text="Canteen" textAlignment="CENTER" />
-            <TextField layoutX="65.0" layoutY="134.0" promptText="Username" />
-            <TextField layoutX="65.0" layoutY="173.0" promptText="Password" />
+            <TextField fx:id="username" layoutX="65.0" layoutY="134.0" promptText="Username" />
+            <TextField fx:id="password" layoutX="65.0" layoutY="173.0" promptText="Password" />
             <Label layoutX="122.0" layoutY="103.0" text="Register" />
             <Label layoutX="89.0" layoutY="208.0" text="Already registered?" />
-            <Button layoutX="122.0" layoutY="225.0" mnemonicParsing="false" text="Login" />
+            <Button layoutX="122.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleLoginPressed" text="Login" />
          </children>
       </Pane>
    </children>

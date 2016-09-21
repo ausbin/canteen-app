@@ -7,9 +7,9 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="307.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JoinController">
    <children>
-      <TextField fx:id="userName" layoutX="70.0" layoutY="149.0" promptText="Username" />
+      <TextField fx:id="username" layoutX="70.0" layoutY="149.0" promptText="Username" />
       <TextField fx:id="password" layoutX="70.0" layoutY="184.0" promptText="Password" />
       <Button fx:id="loginButton" layoutX="124.0" layoutY="224.0" mnemonicParsing="false" text="Login" />
-      <Button fx:id="backButton" layoutX="9.0" layoutY="283.0" mnemonicParsing="false" text="Back To Register" />
+      <Button fx:id="backButton" layoutX="9.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleBackButtonPressed" text="Back To Register" />
    </children>
 </Pane>
