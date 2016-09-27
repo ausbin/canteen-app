@@ -19,6 +19,9 @@ jar {
     }
 }
 
+// Tell gradle to look for source code and resources in `/src/', not
+// `/src/java/main/'.
+// https://docs.gradle.org/current/userguide/java_plugin.html#sec:working_with_java_source_sets
 sourceSets {
     main {
         java {
