@@ -100,6 +100,10 @@ public class MainFXApplication extends Application {
         showView("Profile");
     }
 
+    public void registrationComplete() {
+        showView("Success");
+    }
+
     public static void main(String[] args) {
         launch(args);
     }
