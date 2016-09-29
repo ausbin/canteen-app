@@ -13,12 +13,11 @@ import java.util.Set;
  * Created by NikosD on 9/28/16.
  */
 public class DataSource {
-    private static DataSource instance;
+    private static DataSource instance = new DataSource();
     private Set<User> users;
 
 
     private DataSource() {
-        instance = new DataSource();
         users = new HashSet<>();
     }
 
