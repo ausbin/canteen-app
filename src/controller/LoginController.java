@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Pagination;
 import javafx.scene.control.TextField;
 import model.User;
+import model.DataSource;
+import exception.NoSuchUserException;
 
 /**
  * Created by jitaekim on 9/18/16.
@@ -27,12 +29,13 @@ public class LoginController implements IMainAppReceiver {
     }
 
     public void handleLoginPressed(ActionEvent actionEvent) {
-        User user = User.getDefaultUser();
+        try {
+            User user = DataSource.getInstance().authenticate(
+                username.getText(), password.getText());
 
-        if (user.authenticate(username.getText(), password.getText())) {
             mainApplication.loginComplete(user);
-        } else {
-            mainApplication.showAlert("Access denied. Please try again.");
+        } catch (NoSuchUserException e) {
+            mainApplication.showAlert(e.getMessage());
         }
     }
 

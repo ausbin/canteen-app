@@ -7,11 +7,7 @@ public class User {
     protected String user;
     protected String password;
     protected boolean isblock = false;
-    private static final User defaultUser = new User("user", "pass");
 
-    public static User getDefaultUser() {
-        return defaultUser;
-    }
     public User(){
 
         this("user","pass");
