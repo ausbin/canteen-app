@@ -10,6 +10,7 @@ import javafx.scene.control.ComboBox;
 import model.User;
 import model.AccountType;
 import model.UserFactory;
+import model.DataSource;
 import exception.InvalidUserException;
 
 
@@ -57,6 +58,7 @@ public class WelcomeController implements IMainAppReceiver {
             user = UserFactory.createUser(usernameField.getText(),
                                           passwordField.getText(),
                                           accountTypeBox.getValue());
+            DataSource.getInstance().add(user);
         } catch (InvalidUserException e) {
             mainApplication.showAlert(e.getMessage());
             return;
