@@ -62,17 +62,6 @@ public class ReportListController implements MainAppReceiver, MainControllerRece
     @Override
     public void setMainApp(MainFXApplication mainApp) {
         this.mainApp = mainApp;
-
-        // Populate table
-        Collection<Report> reports;
-        try {
-            reports = mainApp.getDataSource().listReports();
-        } catch (DataException e) {
-            e.printStackTrace();
-            mainApp.showAlert(e.getMessage());
-            return;
-        }
-        reportTable.getItems().setAll(reports);
     }
 
     @Override
