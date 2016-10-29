@@ -116,8 +116,8 @@ public class MainController implements MainAppReceiver {
      * Shows the report list screen.
      */
     public void showReportList() {
-        showView("ReportList");
         closeDrawer();
+        showView("ReportList");
     }
 
     /**
