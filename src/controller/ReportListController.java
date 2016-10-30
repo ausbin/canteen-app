@@ -67,7 +67,7 @@ public class ReportListController implements MainAppReceiver, MainControllerRece
             // Success
             reports -> {
                 // Populate table
-                reportTable.getItems().setAll(reports);
+                //reportTable.getItems().setAll(reports);
             },
             // Failure
             e -> {
